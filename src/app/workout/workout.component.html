@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-xs-5">
+        <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
+            <p class="float-start">Start your workout</p><button type="button" class="btn btn-dark float-end">Start</button>
+        </div>  
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="text-bg-light p-3">Get started at the gym, with out full body workout program</div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="text-bg-light p-3 pb-5">
+            <span class="float-start">Sessions 2/week</span>
+            <span class="float-end">Duration 8 weeks</span>
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group pb-3 d-flex aligns-items-center" role="group" aria-label="Week Selection">
+            <button type="button" class="btn btn-outline-primary">Week 1</button>
+            <button type="button" class="btn btn-outline-primary">Week 2</button>
+            <button type="button" class="btn btn-outline-primary">Week 3</button>
+            <button type="button" class="btn btn-outline-primary">Week 4</button>
+            <button type="button" class="btn btn-outline-primary">Week 5</button>
+            <button type="button" class="btn btn-outline-primary">Week 6</button>
+            <button type="button" class="btn btn-outline-primary">Week 7</button>
+            <button type="button" class="btn btn-outline-primary">Week 8</button>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Day 1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="accordion" id="subaccordionExample">
+                    <div class="accordion-item" *ngFor="let wd of workout_details">
+                        
+                      <h2 class="accordion-header" id="subheadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#subcollapseOne" aria-expanded="true" aria-controls="subcollapseOne">
+                          {{ wd.description }}
+                        </button>
+                      </h2>
+                      <div id="subcollapseOne" class="accordion-collapse collapse show" aria-labelledby="subheadingOne" data-bs-parent="#subaccordionExample">
+                        <div class="accordion-body">
+                          <strong>{{ wd.reps }} {{ wd.type }}</strong> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Day 2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
