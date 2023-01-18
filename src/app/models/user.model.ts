@@ -1,13 +1,11 @@
 import { MemberShip } from "./membership.model";
 
 export class User {
-  user_id: any;
-  firstname: string;
-  lastname: string;
-  phone: string;
+  uid: any;
   email: string;
-  username: string;
-  password: string;
+  displayName: string;
+  photoURL: string;
+  emailVerified: string;
   membership: MemberShip;  
   address: string;
   club_id: any;

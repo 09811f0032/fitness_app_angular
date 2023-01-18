@@ -15,14 +15,13 @@ export class InMemoryDataService implements InMemoryDbService{
       }
     ];
     const users = [
-      { user_id: 1, 
-        firstname: 'Shanmukha', 
-        lastname: 'Kommoju', 
-        phone: '1234567890', 
+      { 
+        uid: 1,  
         email: 'shanmukha@something.com', 
-        username: 'srujan.k', 
-        password: '12345', 
+        displayName: 'Shanmukha Kommoju', 
+        photoURL: '', 
         membership_id: 1,
+        emailVerified: true,
         address: 'xyz, Vantaa 01600',
         club_id: 2
       }];

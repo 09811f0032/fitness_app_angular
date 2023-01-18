@@ -15,6 +15,10 @@
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="/clubs">Clubs</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/auth">Authenticate</a>
+          </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Profile
@@ -23,6 +27,9 @@
               <li><a class="dropdown-item" routerLinkActive="active" routerLink="/profile">Me</a></li>
               <li><a class="dropdown-item" routerLinkActive="active" routerLink="/membership">Your Membership</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary" (click)="signout()"> Logout</button>
           </li>
         </ul>
       </div>
