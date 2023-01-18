@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Workout } from '../models/workout.model';
 import { TrainingServce } from './training.service';
 
@@ -11,8 +12,10 @@ export class TrainingHeaderComponent implements OnInit{
 
   workouts: Workout[] = [];
 
-  constructor(private trainingService: TrainingServce){
-
+  constructor(private trainingService: TrainingServce, private router: Router){
+    router.events.subscribe((val) => {
+      this.getWorkouts();
+    });
   }
 
   ngOnInit(): void {

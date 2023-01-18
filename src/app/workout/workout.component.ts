@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TrainingServce } from '../training-header/training.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { WorkoutDetail } from '../models/workoutdetail.model';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-workout',
@@ -13,8 +12,10 @@ export class WorkoutComponent implements OnInit{
 
   workout_id: any = 1;
   workout_details: WorkoutDetail[] = [];
-  constructor(private trainingService: TrainingServce, private route: ActivatedRoute){
-
+  constructor(private trainingService: TrainingServce, private route: ActivatedRoute, private router: Router){
+    router.events.subscribe((val) => {
+      this.getWorkoutDetails();
+    });
   }
 
   ngOnInit(): void {
